@@ -1,5 +1,6 @@
 # spec/spec_helper.rb
 require 'factory_bot'
+require 'byebug'
 
 RSpec.configure do |config|
   config.include FactoryBot::Syntax::Methods
