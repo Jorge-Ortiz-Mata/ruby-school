@@ -7,3 +7,4 @@ source "https://rubygems.org"
 gem 'jwt'
 gem 'jwe'
 gem 'mongo'
+gem 'rspec', '~> 3.4'
