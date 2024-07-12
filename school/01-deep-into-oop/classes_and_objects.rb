@@ -19,7 +19,7 @@ class Car
   end
 
   def info
-    "The car' details are: \n Make: #{@make}\n Model: #{@model}\n Year: #{@year}"
+    "The car's details are: \n Make: #{@make}\n Model: #{@model}\n Year: #{@year}"
   end
 end
 
