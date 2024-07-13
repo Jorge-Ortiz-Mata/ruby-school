@@ -1,7 +1,9 @@
 # frozen_string_literal: false
+require_relative '../modules/drivable'
 
 # It models a class car
 class Car
+  include Drivable
   attr_reader :year, :make, :model
 
   def initialize(make, model, year)

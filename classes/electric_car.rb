@@ -1,6 +1,6 @@
 # frozen_string_literal: false
 
-# It models a class car
+# It models a class electric car
 require_relative 'car'
 
 class ElectricCar < Car

@@ -25,4 +25,12 @@ RSpec.describe Car do
       expect(car.info).to eq(expected_info)
     end
   end
+
+  describe 'modules' do
+    context 'Drivable' do
+      it 'shows the drive message' do
+        expect(car.drive).to eql 'Driving!'
+      end
+    end
+  end
 end

@@ -1,6 +1,6 @@
 # frozen_string_literal: false
 
-# It models a class car
+# It models a class person
 require_relative 'car'
 
 class Person

@@ -5,6 +5,7 @@ require 'simplecov'
 
 SimpleCov.start do
   track_files 'classes/**/*.rb'
+  track_files 'modules/**/*.rb'
   add_filter '/spec/' # Exclude spec files from the coverage report
 end
 
