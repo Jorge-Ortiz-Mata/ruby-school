@@ -1,8 +1,8 @@
 # frozen_string_literal: false
 
-# factories/cars.rb
+# factories/electric_cars.rb
 FactoryBot.define do
-  factory :car do
+  factory :electric_car do
     make { 'KIA' }
     model { 'Forte HB Black' }
     year { 2017 }

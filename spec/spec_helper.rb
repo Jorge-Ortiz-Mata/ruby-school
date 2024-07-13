@@ -4,11 +4,12 @@ require 'byebug'
 require 'simplecov'
 
 SimpleCov.start do
-  track_files '{school}/**/*.rb'
+  track_files 'classes/**/*.rb'
+  add_filter '/spec/' # Exclude spec files from the coverage report
 end
 
 # Require all Ruby files in the 'lib' and 'app' directories
-# Dir['./{school}/**/*.rb'].sort.each { |file| require file }
+# Dir['./{classes}/**/*.rb'].sort.each { |file| require file }
 
 RSpec.configure do |config|
   config.include FactoryBot::Syntax::Methods
