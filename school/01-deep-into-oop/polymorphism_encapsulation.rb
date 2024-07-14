@@ -1,21 +1,3 @@
-class Shape
-  def area
-    'Calculating data'
-  end
-end
-
-class Circle < Shape
-  def area
-    'Area of the circle'
-  end
-end
-
-class Square < Shape
-  def area
-    'Area of the square'
-  end
-end
-
 class BankAccount
   def initialize(balance)
     @balance = balance
