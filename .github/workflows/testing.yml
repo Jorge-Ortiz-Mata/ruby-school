@@ -32,8 +32,14 @@ jobs:
       - name: Run specs
         run: rspec spec
 
+      - name: List coverage files
+        run: ls -R coverage
+
+      - name: Show environment variables
+        run: printenv
+        
       - name: Upload coverage to Codecov
         if: success()
-        run: bash <(curl -s https://codecov.io/bash)
+        run: bash <(curl -s https://codecov.io/bash) -v
         env:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}

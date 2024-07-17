@@ -3,17 +3,17 @@ require 'factory_bot'
 require 'byebug'
 require 'simplecov'
 require 'codecov'
-require 'uri'
+
+SimpleCov.start do
+  track_files 'classes/**/*.rb'
+  # track_files 'classes/*.rb'
+  add_filter '/spec/' # Exclude spec files from the coverage report
+end
 
 SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([
   SimpleCov::Formatter::HTMLFormatter,
   SimpleCov::Formatter::Codecov
 ])
-
-SimpleCov.start do
-  track_files 'classes/*.rb'
-  add_filter '/spec/' # Exclude spec files from the coverage report
-end
 
 # Require all Ruby files in the 'lib' and 'app' directories
 # Dir['./{classes}/**/*.rb'].sort.each { |file| require file }
