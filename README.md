@@ -1,6 +1,7 @@
 # Ruby School
 
-[![Coverage Status](https://coveralls.io/repos/github/Jorge-Ortiz-Mata/ruby-school/badge.svg)](https://coveralls.io/github/Jorge-Ortiz-Mata/ruby-school)
+[![codecov](https://codecov.io/gh/Jorge-Ortiz-Mata/ruby-school/branch/main/graph/badge.svg?token=your_token)](https://codecov.io/gh/Jorge-Ortiz-Mata/ruby-school)
+
 
 
 This repository is created to add and test new technologies used.
