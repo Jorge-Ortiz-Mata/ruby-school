@@ -4,12 +4,13 @@ source "https://rubygems.org"
 
 # gem "rails"
 
-gem 'jwt'
+gem 'byebug'
+gem 'coveralls', require: false
+gem 'date_time_utils', path: './gems/date_time_utils'
+gem 'factory_bot'
 gem 'jwe'
+gem 'jwt'
+gem 'manipulation', path: './gems/manipulation'
 gem 'mongo'
 gem 'rspec', '~> 3.4'
-gem 'factory_bot'
-gem 'byebug'
 gem 'simplecov'
-gem 'manipulation', path: './gems/manipulation'
-gem 'date_time_utils', path: './gems/date_time_utils'

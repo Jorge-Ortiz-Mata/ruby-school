@@ -31,3 +31,9 @@ jobs:
 
       - name: Run specs
         run: rspec spec
+
+      - name: Upload coverage to Coveralls
+        if: success()
+        run: bundle exec coveralls push
+        env:
+          COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
