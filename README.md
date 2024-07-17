@@ -1,6 +1,6 @@
 # Ruby School
 
-[![codecov](https://codecov.io/gh/Jorge-Ortiz-Mata/ruby-school/branch/main/graph/badge.svg?token=your_token)](https://codecov.io/gh/Jorge-Ortiz-Mata/ruby-school)
+[![codecov](https://codecov.io/github/Jorge-Ortiz-Mata/ruby-school/graph/badge.svg?token=ROH4LOCC1B)](https://codecov.io/github/Jorge-Ortiz-Mata/ruby-school)
 
 
 
