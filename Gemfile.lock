@@ -1,3 +1,13 @@
+PATH
+  remote: gems/date_time_utils
+  specs:
+    date_time_utils (1.0.0)
+
+PATH
+  remote: gems/manipulation
+  specs:
+    manipulation (1.0.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -59,9 +69,11 @@ PLATFORMS
 
 DEPENDENCIES
   byebug
+  date_time_utils!
   factory_bot
   jwe
   jwt
+  manipulation!
   mongo
   rspec (~> 3.4)
   simplecov
