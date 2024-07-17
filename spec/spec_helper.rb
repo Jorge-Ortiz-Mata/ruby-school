@@ -3,6 +3,7 @@ require 'factory_bot'
 require 'byebug'
 require 'simplecov'
 require 'codecov'
+require 'uri'
 
 SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([
   SimpleCov::Formatter::HTMLFormatter,
