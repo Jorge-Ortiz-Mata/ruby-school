@@ -1,0 +1,33 @@
+name: Testing process
+
+on:
+  workflow_dispatch:
+  # Trigger the workflow on pushes to the main branch, including PR merges:
+  push:
+    branches:
+      - main
+
+# Generate a GitHub token that can be exchanged with Google Cloud - see
+# https://github.com/google-github-actions/auth/tree/v0.6.0#setting-up-workload-identity-federation
+permissions:
+  contents: read
+  id-token: write
+  deployments: write
+
+jobs:
+  testing:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get the code
+        uses: actions/checkout@v3.1.0
+
+      - name: Set Ruby
+        uses: ruby/setup-ruby@v1
+          with:
+            ruby-version: '3.3.1'
+
+      - name: Install Gems
+        run: bundle
+
+      - name: Run specs
+        run: rspec spec
