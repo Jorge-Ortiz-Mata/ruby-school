@@ -4,12 +4,15 @@ require 'byebug'
 require 'simplecov'
 require 'coveralls'
 
+SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([
+  SimpleCov::Formatter::HTMLFormatter,
+  Coveralls::SimpleCov::Formatter
+])
+
 SimpleCov.start do
   track_files 'classes/*.rb'
   add_filter '/spec/' # Exclude spec files from the coverage report
 end
-
-Coveralls.wear!
 
 # Require all Ruby files in the 'lib' and 'app' directories
 # Dir['./{classes}/**/*.rb'].sort.each { |file| require file }
