@@ -8,6 +8,11 @@ PATH
   specs:
     manipulation (1.0.0)
 
+PATH
+  remote: gems/password_generator
+  specs:
+    password_generator (1.0.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -78,6 +83,7 @@ DEPENDENCIES
   jwt
   manipulation!
   mongo
+  password_generator!
   rspec (~> 3.4)
   simplecov (< 0.22)
 

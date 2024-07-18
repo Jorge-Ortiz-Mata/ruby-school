@@ -1,5 +1,5 @@
 # manipulation/manipulation.gemspec
-# 
+
 Gem::Specification.new do |spec|
   spec.name          = "manipulation"
   spec.version       = "1.0.0"
