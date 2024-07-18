@@ -30,7 +30,7 @@ jobs:
         run: bundle
 
       - name: Run specs
-        run: rspec spec
+        run: bundle exec rspec spec
 
       - name: List coverage files
         run: ls -R coverage
