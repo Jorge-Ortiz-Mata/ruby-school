@@ -3,54 +3,47 @@
 # It models the PasswordGenerator module
 module PasswordGenerator
   def lowercase(length)
-    password = ''
-
-    length.times do
-      random_number = rand(lower_alphabet_array.length - 1)
-
-      password += lower_alphabet_array[random_number]
-    end
-
-    password.downcase
+    password_conditions(length, lower_alphabet_array, /^[a-z]+$/)
   end
 
   def lowercase_upcase(length)
-    password = ''
-
-    length.times do
-      random_number = rand(lower_upcase_alphabet_array.length - 1)
-
-      password += lower_upcase_alphabet_array[random_number]
-    end
-
-    password
+    password_conditions(length, lower_upcase_alphabet_array, /^[a-zA-Z]+$/)
   end
 
   def lowercase_upcase_numbers(length)
-    password = ''
-
-    length.times do
-      random_number = rand(alphanumeric_array.length - 1)
-
-      password += alphanumeric_array[random_number]
-    end
-
-    password
+    password_conditions(length, alphanumeric_array, /^[a-zA-Z0-9]+$/)
   end
 
   def lowercase_upcase_numbers_characters(length)
+    password_conditions(length, alphanumeric_array, /^[a-zA-Z0-9!@#$%-&*()]+$/)
+  end
+
+  private
+
+  def password_conditions(length, array_conditions, regex)
     password = ''
+    is_valid = false
 
-    length.times do
-      random_number = rand(alphanumeric_with_special_chars_array.length - 1)
-
-      password += alphanumeric_with_special_chars_array[random_number]
+    loop do
+      password = random_password(length, array_conditions)
+      is_valid = true if password =~ regex
+      break if is_valid
     end
 
     password
   end
 
-  private
+  def random_password(length, password_format)
+    password = ''
+
+    length.times do
+      random_number = rand(password_format.length - 1)
+
+      password += password_format[random_number]
+    end
+
+    password
+  end
 
   def lower_alphabet_array
     @lower_alphabet_array ||= ('a'..'z').to_a

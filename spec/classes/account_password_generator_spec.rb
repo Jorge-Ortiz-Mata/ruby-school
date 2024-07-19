@@ -7,7 +7,7 @@ RSpec.describe AccountPasswordGenerator do
   let(:regex_lowercase) { /^[a-z]+$/ }
   let(:regex_lowercase_upcase) { /^[a-zA-Z]+$/ }
   let(:regex_lowercase_upcase_numbers) { /^[a-zA-Z0-9]+$/ }
-  let(:regex_lowercase_upcase_numbers_characters) { /^[a-zA-Z0-9!@#$%^&*()]+$/ }
+  let(:regex_lowercase_upcase_numbers_characters) { /^[a-zA-Z0-9!@#$%-&*()]+$/ }
 
   context 'public methods' do
     it 'should render a default message with no option selected' do
