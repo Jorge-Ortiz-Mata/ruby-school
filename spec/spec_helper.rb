@@ -3,6 +3,8 @@ require 'factory_bot'
 require 'byebug'
 require 'simplecov'
 require 'codecov'
+require 'webmock/rspec'
+require 'dotenv'
 
 SimpleCov.start do
   track_files 'classes/**/*.rb'
@@ -14,6 +16,10 @@ SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([
   SimpleCov::Formatter::HTMLFormatter,
   SimpleCov::Formatter::Codecov
 ])
+
+WebMock.disable_net_connect!(allow_localhost: true)
+
+Dotenv.load('.env')
 
 # Require all Ruby files in the 'lib' and 'app' directories
 # Dir['./{classes}/**/*.rb'].sort.each { |file| require file }

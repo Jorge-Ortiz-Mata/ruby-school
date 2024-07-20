@@ -15,7 +15,7 @@ module PasswordGenerator
   end
 
   def lowercase_upcase_numbers_characters(length)
-    password_conditions(length, alphanumeric_array, /^[a-zA-Z0-9!@#$%-&*()]+$/)
+    password_conditions(length, alphanumeric_with_special_chars_array, /^[a-zA-Z0-9!@#$%-&*()]+$/)
   end
 
   private
